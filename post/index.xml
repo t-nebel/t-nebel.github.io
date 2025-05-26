@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Through the Fog</title><link>https://blog.nebel.ruhr/post/</link><description>Recent content in Posts on Through the Fog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 22 May 2025 21:00:00 +0000</lastBuildDate><atom:link href="https://blog.nebel.ruhr/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World</title><link>https://blog.nebel.ruhr/p/hello-world/</link><pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate><guid>https://blog.nebel.ruhr/p/hello-world/</guid><description>&lt;img src="https://blog.nebel.ruhr/p/hello-world/header.jpeg" alt="Featured image of post Hello World" />&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Hello World!&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="welcome-to-the-blog---through-the-fog">Welcome to the Blog - Through the Fog
+&lt;/h1>&lt;p>So here we go - in the future I plan to publish blog posts about (primarily) smaller PowerShell scripts/projects, Microsoft Teams Voice, AudioCodes SBCs and everything else that keeps me going.&lt;/p></description></item></channel></rss>
