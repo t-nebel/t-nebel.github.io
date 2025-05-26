@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://t-nebel.github.io"
+baseurl = "https://blog.nebel.ruhr"
 languageCode = "en-us"
 title = "Through the Fog"
 
