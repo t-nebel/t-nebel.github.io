@@ -17,8 +17,8 @@ Alarichstraße 16a<br>
 </p><p> <strong>Vertreten durch: </strong><br>
 Tobias Nebel<br>
 </p><p><strong>Kontakt:</strong> <br>
-Telefon: O234 - 
-E-Mail: <a href='mailto:blog@nebel.ruhr'>blog@nebel.ruhr</a></br></p><p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br>
+Telefon: O234 - <br>
+E-Mail: blog -{at}- nebel.ruhr</a></br></p><p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br>
 Tobias Nebel <br> 
 Alarichstraße 16a<br> 
 44803 Bochum <br></p> <p><strong>Haftungsausschluss: </strong><br><br><strong>Haftung für Inhalte</strong><br><br>
