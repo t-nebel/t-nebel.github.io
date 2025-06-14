@@ -77,7 +77,7 @@ $AppSecret = Read-Host "Enter App Secret" -AsSecureString
 ```
 
 #### Date Range Options
-```
+```powershell
 # Last 30 days
 .\ConcurrentCallsAnalysis.ps1 -DataSource GraphAPI -GraphConnectionMode AppSecret -AppId "..." -TenantId "..." -AppSecret $secret -startDate (Get-Date).AddDays(-30)
 
@@ -97,12 +97,12 @@ Perfect for one-time analysis or when you prefer working with Teams Admin Center
 5. Save as CSV format
 
 #### Step 2: Run the Analysis
-```
+```powershell
 .\ConcurrentCallsAnalysis.ps1 -DataSource CSV -CsvPath "C:\Downloads\DirectRoutingData.csv"
 ```
 
 ### Additional Options
-```
+```powershell
 # Specific SBCs only
 .\ConcurrentCallsAnalysis.ps1 -DataSource CSV -CsvPath "data.csv" -sbcFQDNs @("sbc1.domain.com", "sbc2.domain.com")
 
