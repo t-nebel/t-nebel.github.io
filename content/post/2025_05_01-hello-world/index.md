@@ -7,7 +7,6 @@ lastmod: 2025-05-22 21:00:00+0000
 image: header.jpeg
 categories:
     - Offtopic
-weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 toc: false
 ---
 
