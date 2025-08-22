@@ -10,6 +10,8 @@ categories:
 toc: false
 ---
 
+> **📢 Update - Aug 22, 2025:** This post has been updated with information about the new v2.0 release featuring enhanced name-based validation and improved reporting capabilities!
+
 ## The Challenge with AudioCodes SBC Configurations
 If you’ve worked with AudioCodes Session Border Controllers (SBCs), you know that comparing INI configuration files can be tricky. These files are packed with sections like IP Profiles, where endless strings of 0s and 1s which will make spotting differences feel like searching for needles in a haystack. Manual reviews sometimes miss subtle changes in parameters that could lead to issues in call handling.
 This is especially true when you have multiple SBCs in an "active-active-cluster" setup. The challenge is to quickly identify what’s changed, what’s missing, and what could potentially cause problems.
@@ -58,9 +60,9 @@ You can find the script in the GitHub repository: [AudioCodes SBC INI File Compa
 ## Current Limitations ✅ **RESOLVED!**
 ~~One current limitation is (at least for now 😉) the handling of missmatching indexes but with the same content. For example, if both INI files have an IP Profile with the profile name "Teams" with the same settings, but on the first SBC it's listed as index 0 and on the second SBC as index 1, the script could not match them correctly and will show them as different.~~ 
 
-**UPDATE 22.08.2025:** This limitation has been completely resolved! The new `-IncludeNameValidation` parameter enables intelligent name-based comparison that automatically matches entries by their names, regardless of index position differences.
+**UPDATE Aug 22,2025:** This limitation has been completely resolved! The new `-IncludeNameValidation` parameter enables intelligent name-based comparison that automatically matches entries by their names, regardless of index position differences.
 
-## 🎉 What's New in v2.0 (22.08.2025)
+## 🎉 What's New in v2.0 (Aug 22,2025)
 
 **Major Feature Enhancement: Name-Based Validation & Enhanced Reporting**
 
