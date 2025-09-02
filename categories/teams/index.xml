@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Microsoft Teams on Through the Fog</title><link>https://blog.nebel.ruhr/categories/teams/</link><description>Recent content in Microsoft Teams on Through the Fog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 02 Sep 2025 08:00:00 +0000</lastBuildDate><atom:link href="https://blog.nebel.ruhr/categories/teams/index.xml" rel="self" type="application/rss+xml"/><item><title>Teams User History – Who Had That Number? 📚</title><link>https://blog.nebel.ruhr/p/teams-user-history/</link><pubDate>Mon, 01 Sep 2025 10:00:00 +0000</pubDate><guid>https://blog.nebel.ruhr/p/teams-user-history/</guid><description>&lt;img src="https://blog.nebel.ruhr/p/teams-user-history/header.png" alt="Featured image of post Teams User History – Who Had That Number? 📚" /&gt;&lt;h2 id="the-mystery-of-the-missing-number"&gt;The Mystery of the Missing Number
+&lt;/h2&gt;&lt;p&gt;Ever played detective in your own Teams environment? One day, John Doe is reachable at his usual number, and the next, he’s vanished into the digital ether. You start asking the usual questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;📞 What was John Doe&amp;rsquo;s phone number before it was changed?&lt;/li&gt;
+&lt;li&gt;🔄 Did his Online Voice Routing Policy get switched?&lt;/li&gt;
+&lt;li&gt;🤔 And the million-dollar question: Who has his old number now?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These are the everyday mysteries that Teams admins face. It often feels like you need a digital DeLorean to go back in time and see what happened.&lt;/p&gt;
+&lt;h2 id="introducing-teams-user-history"&gt;Introducing: Teams User History
+&lt;/h2&gt;&lt;p&gt;What if you had a personal Wayback Machine for your Teams users? That’s the idea behind the &amp;ldquo;Teams User History&amp;rdquo; project. It’s a simple, yet effective, way to keep track of user configurations over time.&lt;/p&gt;
+&lt;p&gt;The entire solution is built around a GitHub repository, which might sound a bit unusual at first. But when you think about it, it’s the perfect fit:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;📝 &lt;strong&gt;Automatic Versioning&lt;/strong&gt;: Every change is a commit. You get a complete, timestamped history of all data modifications for free.&lt;/li&gt;
+&lt;li&gt;🤝 &lt;strong&gt;Simple Collaboration&lt;/strong&gt;: Need to share the data with a colleague? Just grant them access to the repo.&lt;/li&gt;
+&lt;li&gt;⚡ &lt;strong&gt;Powerful Automation&lt;/strong&gt;: GitHub Actions are used to automatically collect the data on a schedule. No more manual exports!&lt;/li&gt;
+&lt;li&gt;🔐 &lt;strong&gt;Secure Access&lt;/strong&gt;: By using a Federated Credential, the data collection script authenticates against Microsoft Graph API without any secrets stored in the repository.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="key-features-"&gt;Key Features 🎯
+&lt;/h2&gt;&lt;h3 id="-phone-number-change-tracking"&gt;📞 Phone Number Change Tracking
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Complete number history&lt;/strong&gt;: Track all phone number assignments and changes over time&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deleted user handling&lt;/strong&gt;: Smart detection and preservation of data when users are removed from the tenant&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Number reassignment visibility&lt;/strong&gt;: See exactly when numbers move between users&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-comprehensive-user-change-monitoring"&gt;👥 Comprehensive User Change Monitoring
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Effective policy tracking&lt;/strong&gt;: Leverages Teams PowerShell Effective Policy Assignments to capture all deviations from global defaults&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UPN change resilience&lt;/strong&gt;: Tracks User Principal Name changes seamlessly by using UserID as the primary identifier in the background&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Complete configuration visibility&lt;/strong&gt;: Monitor Voice Routing Policies, Dial Plans, Calling Policies, and more&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-automated-housekeeping"&gt;🧹 Automated Housekeeping
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cleanup workflows&lt;/strong&gt;: Built-in archive and cleanup workflows for efficient data management&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Retention policies&lt;/strong&gt;: Configurable data retention to keep your repository size manageable&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Automated maintenance&lt;/strong&gt;: Schedule regular housekeeping tasks to maintain optimal performance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-performance-optimizations"&gt;⚡ Performance Optimizations
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Pre-loaded PowerShell modules&lt;/strong&gt;: Teams PowerShell modules are cached and updated monthly via automated workflows for faster execution&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Optimized data collection&lt;/strong&gt;: Efficient API calls and data processing to minimize runtime&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Incremental updates&lt;/strong&gt;: Only captures and commits actual changes, reducing repository bloat&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-on-demand-reporting"&gt;📊 On-Demand Reporting
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Workflow integration&lt;/strong&gt;: Simple, form-based report generation directly from the GitHub UI&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Summary visibility&lt;/strong&gt;: All report results are displayed in the GitHub Actions summary for easy access&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Two report types&lt;/strong&gt;: One for user history reports, and another for phone number tracking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="how-it-works-"&gt;How it Works ⚙️
+&lt;/h2&gt;&lt;p&gt;The project uses a PowerShell script, running on a scheduled GitHub Action, to fetch user details from your Microsoft tenant. It grabs key information like assigned phone numbers, Online Voice Routing Policies, and other user attributes, and stores them as JSON files in the repository.&lt;/p&gt;
+&lt;p&gt;For policy tracking and monitoring, the solution leverages the &lt;a class="link" href="https://learn.microsoft.com/en-us/powershell/module/microsoftteams/get-csonlineuser?view=teams-ps" target="_blank" rel="noopener"
+&gt;Get-CsOnlineUser&lt;/a&gt; cmdlet&amp;rsquo;s &lt;strong&gt;EffectivePolicyAssignments&lt;/strong&gt; output. This tracks effective policies regardless of whether they&amp;rsquo;re assigned directly to users or through group assignments. The beauty of this approach is that it only shows entries when policies actually deviate from the global defaults, significantly reducing overhead and noise. If a policy is ever directly assigned to a user and later removed, that entry will appear in the effective policy assignments from that moment forward, ensuring Teams User History captures even these transitional states.&lt;/p&gt;
+&lt;p&gt;Because every change to these files is a new commit in the git history, you can easily check the history to see when changes happened and what a user&amp;rsquo;s configuration looked like at any point in time.&lt;/p&gt;
+&lt;h2 id="easy-reporting-with-github-workflows-"&gt;Easy Reporting with GitHub Workflows 🚀
+&lt;/h2&gt;&lt;p&gt;To make this even more user-friendly, the project includes two simple GitHub workflows that you can trigger manually from the UI:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;👤 &lt;strong&gt;Get User History by UPN&lt;/strong&gt;: Just enter a User Principal Name (UPN), and the workflow will generate a report of that user&amp;rsquo;s history.&lt;/li&gt;
+&lt;li&gt;📞 &lt;strong&gt;Get Number History&lt;/strong&gt;: Enter a phone number, and the workflow will tell you which users have had that number assigned to them over time.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It’s as simple as filling out a form and clicking a button.&lt;/p&gt;
+&lt;h3 id="running-a-report"&gt;Running a Report
+&lt;/h3&gt;&lt;p&gt;To run a report, follow these simple steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Navigate to the &lt;strong&gt;Actions&lt;/strong&gt; tab in your GitHub repository.&lt;/li&gt;
+&lt;li&gt;Select the workflow you want to run from the list on the left.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="-generate-user-report"&gt;📝 Generate User Report
+&lt;/h4&gt;&lt;p&gt;This workflow allows you to see the history of a specific user.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Select the &lt;strong&gt;📝 Generate User Report&lt;/strong&gt; workflow.&lt;/li&gt;
+&lt;li&gt;Click the &lt;strong&gt;Run workflow&lt;/strong&gt; dropdown button.&lt;/li&gt;
+&lt;li&gt;Enter the &lt;strong&gt;User Principal Name (UPN)&lt;/strong&gt; of the user you want to investigate.&lt;/li&gt;
+&lt;li&gt;Click the green &lt;strong&gt;Run workflow&lt;/strong&gt; button.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href="userReport-AlEi.png" target="_blank"&gt;&lt;img src="userReport-AlEi.png" width="80%" alt="Example of a user report showing historical changes for a specific user"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id="-generate-phone-number-report"&gt;📞 Generate Phone Number Report
+&lt;/h4&gt;&lt;p&gt;This workflow helps you find out who has been assigned a specific phone number over time.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Select the &lt;strong&gt;📞 Generate Phone Number Report&lt;/strong&gt; workflow.&lt;/li&gt;
+&lt;li&gt;Click the &lt;strong&gt;Run workflow&lt;/strong&gt; dropdown button.&lt;/li&gt;
+&lt;li&gt;Enter the &lt;strong&gt;Phone Number&lt;/strong&gt; in E.164 format (e.g., &lt;code&gt;+1234567890&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Click the green &lt;strong&gt;Run workflow&lt;/strong&gt; button.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href="phoneReport.png" target="_blank"&gt;&lt;img src="phoneReport.png" width="80%" alt="Example of a phone number report showing historical changes for a specific phone number"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This turns a potentially painful investigation into a two-minute task.&lt;/p&gt;
+&lt;h2 id="get-started-"&gt;Get Started 🎯
+&lt;/h2&gt;&lt;p&gt;If you&amp;rsquo;re tired of chasing ghosts in your Teams environment, head over to the GitHub repository to get started. The setup is straightforward, and the peace of mind is priceless. You can find the repository here: &lt;a class="link" href="https://github.com/t-nebel/teams-user-history" target="_blank" rel="noopener"
+&gt;Teams User History&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Microsoft Teams Direct Routing - Get the concurrent call insights 📞</title><link>https://blog.nebel.ruhr/p/teams-dr-concurrent-calls-report/</link><pubDate>Fri, 13 Jun 2025 00:00:00 +0000</pubDate><guid>https://blog.nebel.ruhr/p/teams-dr-concurrent-calls-report/</guid><description>&lt;img src="https://blog.nebel.ruhr/p/teams-dr-concurrent-calls-report/header.jpeg" alt="Featured image of post Microsoft Teams Direct Routing - Get the concurrent call insights 📞" /&gt;&lt;h2 id="the-problem"&gt;The problem
+&lt;/h2&gt;&lt;p&gt;You&amp;rsquo;ve probably been asked this question before: &lt;strong&gt;&amp;ldquo;How many concurrent calls are we handling through our Microsoft Teams Direct Routing SBCs?&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Normally Teams admins head straight to the Teams Admin Center, check those usage reports for their SBCs, and find hourly incoming and outgoing call counts. While helpful, this doesn&amp;rsquo;t answer the real question: &lt;strong&gt;How many calls were happening simultaneously?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This becomes even more challenging when you&amp;rsquo;re running multiple SBCs with load balancing - you need to piece together the total concurrent call picture across your entire SIP trunk infrastructure.&lt;/p&gt;
+&lt;h2 id="a-powershell-solution"&gt;A PowerShell Solution
+&lt;/h2&gt;&lt;p&gt;I needed better visibility into concurrent call patterns, so I built a PowerShell script that handles the calculations and data aggregation. The script includes an HTML dashboard (with some support from 🤖 Copilot for the visual elements) that provides:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;strong&gt;Actual concurrent calls&lt;/strong&gt; calculations&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;Cross-SBC aggregation&lt;/strong&gt; for total infrastructure view&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;HTML dashboard&lt;/strong&gt; for reporting&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;Dual data sources&lt;/strong&gt;: Graph API or CSV exports&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;Business hours analysis&lt;/strong&gt; for capacity planning&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;Weekly usage patterns&lt;/strong&gt; and trend analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="github-repository"&gt;GitHub Repository
+&lt;/h2&gt;&lt;p&gt;You can find the script and detailed instructions in the GitHub repository: &lt;a class="link" href="https://github.com/t-nebel/dr-concurrent-calls-report" target="_blank" rel="noopener"
+&gt;Teams Direct Routing Concurrent Calls Analysis&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="sample-output"&gt;Sample Output
+&lt;/h2&gt;&lt;p&gt;The generated HTML report will look like this:&lt;/p&gt;
+&lt;p&gt;&lt;a href="screenshot_overview.png" target="_blank"&gt;&lt;img src="screenshot_overview.png" width="500" alt="Sample Output Screenshot"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="key-features"&gt;Key Features
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;🔄 Flexible Data Sources - Two options depending on your workflow:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Graph API&lt;/strong&gt;: Direct connection for automation with flexible date ranges
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;App Secret&lt;/strong&gt; or &lt;strong&gt;Certificate&lt;/strong&gt; authentication modes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CSV Import&lt;/strong&gt;: Works with Teams Admin Center exports for ad-hoc analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;📊 Easy Analytics&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Daily concurrent call trends with visual charts&lt;/li&gt;
+&lt;li&gt;Business hours averages (Monday-Friday, 8AM-6PM)&lt;/li&gt;
+&lt;li&gt;90th percentile capacity thresholds&lt;/li&gt;
+&lt;li&gt;Weekly heatmaps showing peak usage times&lt;/li&gt;
+&lt;li&gt;Top 10 highest traffic days for pattern analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="how-to-use-this-script"&gt;How to use this script
+&lt;/h2&gt;&lt;h3 id="option-1-graph-api-connection-flexible-approach"&gt;Option 1: Graph API connection (flexible approach)
+&lt;/h3&gt;&lt;p&gt;Best for flexible reporting for example in context of the date range.&lt;/p&gt;
+&lt;h4 id="prerequisites"&gt;Prerequisites
+&lt;/h4&gt;&lt;p&gt;Cause the Graph permission for that is only usable in the application context (and not your user context), you need an &lt;strong&gt;Azure App Registration&lt;/strong&gt; with GraphAPI application permission &lt;code&gt;CallRecords.Read.All&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id="authentication-examples"&gt;Authentication Examples
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;App Secret Authentication:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Ensure you have the Microsoft.Graph module installed&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;$AppSecret&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;Read-Host&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Enter App Secret&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-AsSecureString&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.\&lt;/span&gt;&lt;span class="n"&gt;ConcurrentCallsAnalysis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;ps1&lt;/span&gt; &lt;span class="n"&gt;-DataSource&lt;/span&gt; &lt;span class="n"&gt;GraphAPI&lt;/span&gt; &lt;span class="n"&gt;-GraphConnectionMode&lt;/span&gt; &lt;span class="n"&gt;AppSecret&lt;/span&gt; &lt;span class="n"&gt;-AppId&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;your-app-id&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-TenantId&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;your-tenant-id&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-AppSecret&lt;/span&gt; &lt;span class="nv"&gt;$AppSecret&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Certificate Authentication:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Ensure you have the Microsoft.Graph module installed&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.\&lt;/span&gt;&lt;span class="n"&gt;ConcurrentCallsAnalysis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;ps1&lt;/span&gt; &lt;span class="n"&gt;-DataSource&lt;/span&gt; &lt;span class="n"&gt;GraphAPI&lt;/span&gt; &lt;span class="n"&gt;-GraphConnectionMode&lt;/span&gt; &lt;span class="n"&gt;Certificate&lt;/span&gt; &lt;span class="n"&gt;-AppId&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;your-app-id&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-TenantId&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;your-tenant-id&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-CertificateThumbprint&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;cert-thumbprint&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id="date-range-options"&gt;Date Range Options
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Last 30 days&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.\&lt;/span&gt;&lt;span class="n"&gt;ConcurrentCallsAnalysis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;ps1&lt;/span&gt; &lt;span class="n"&gt;-DataSource&lt;/span&gt; &lt;span class="n"&gt;GraphAPI&lt;/span&gt; &lt;span class="n"&gt;-GraphConnectionMode&lt;/span&gt; &lt;span class="n"&gt;AppSecret&lt;/span&gt; &lt;span class="n"&gt;-AppId&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-TenantId&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-AppSecret&lt;/span&gt; &lt;span class="nv"&gt;$secret&lt;/span&gt; &lt;span class="n"&gt;-startDate&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;Get-Date&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="py"&gt;AddDays&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;-30&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Specific period&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.\&lt;/span&gt;&lt;span class="n"&gt;ConcurrentCallsAnalysis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;ps1&lt;/span&gt; &lt;span class="n"&gt;-DataSource&lt;/span&gt; &lt;span class="n"&gt;GraphAPI&lt;/span&gt; &lt;span class="n"&gt;-GraphConnectionMode&lt;/span&gt; &lt;span class="n"&gt;AppSecret&lt;/span&gt; &lt;span class="n"&gt;-AppId&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-TenantId&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-AppSecret&lt;/span&gt; &lt;span class="nv"&gt;$secret&lt;/span&gt; &lt;span class="n"&gt;-startDate&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;2024-01-01&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-endDate&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;2024-01-31&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="option-2-csv-import-quick-analysis"&gt;Option 2: CSV Import (Quick Analysis)
+&lt;/h3&gt;&lt;p&gt;Perfect for one-time analysis or when you prefer working with Teams Admin Center exports.&lt;/p&gt;
+&lt;h4 id="step-1-export-from-teams-admin-center"&gt;Step 1: Export from Teams Admin Center
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Navigate to &lt;strong&gt;Teams Admin Center&lt;/strong&gt; → &lt;strong&gt;Analytics &amp;amp; reports&lt;/strong&gt; → &lt;strong&gt;Usage reports&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Select &lt;strong&gt;PSTN and SMS usage&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Choose &lt;strong&gt;Direct Routing&lt;/strong&gt; tab&lt;/li&gt;
+&lt;li&gt;Set your date range and export to Excel&lt;/li&gt;
+&lt;li&gt;Save as CSV format&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="step-2-run-the-analysis"&gt;Step 2: Run the Analysis
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.\&lt;/span&gt;&lt;span class="n"&gt;ConcurrentCallsAnalysis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;ps1&lt;/span&gt; &lt;span class="n"&gt;-DataSource&lt;/span&gt; &lt;span class="n"&gt;CSV&lt;/span&gt; &lt;span class="n"&gt;-CsvPath&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;C:\Downloads\DirectRoutingData.csv&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="additional-options"&gt;Additional Options
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Specific SBCs only&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.\&lt;/span&gt;&lt;span class="n"&gt;ConcurrentCallsAnalysis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;ps1&lt;/span&gt; &lt;span class="n"&gt;-DataSource&lt;/span&gt; &lt;span class="n"&gt;CSV&lt;/span&gt; &lt;span class="n"&gt;-CsvPath&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;data.csv&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-sbcFQDNs&lt;/span&gt; &lt;span class="vm"&gt;@&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;sbc1.domain.com&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;sbc2.domain.com&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Custom output location&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.\&lt;/span&gt;&lt;span class="n"&gt;ConcurrentCallsAnalysis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;ps1&lt;/span&gt; &lt;span class="n"&gt;-DataSource&lt;/span&gt; &lt;span class="n"&gt;GraphAPI&lt;/span&gt; &lt;span class="n"&gt;-GraphConnectionMode&lt;/span&gt; &lt;span class="n"&gt;AppSecret&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;-outputPath&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;C:\Reports\TeamsAnalysis.html&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="what-you-get"&gt;What You Get
+&lt;/h2&gt;&lt;h3 id="-key-metrics"&gt;📈 Key Metrics
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Analysis Period&lt;/strong&gt;: Days covered in the report&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Peak Daily Calls&lt;/strong&gt;: Maximum concurrent call load&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Daily Average&lt;/strong&gt;: Typical concurrent call volume&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Business Hours Average&lt;/strong&gt;: Workday-specific metrics (Mon-Fri, 8AM-6PM)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;90th Percentile&lt;/strong&gt;: Capacity planning baseline&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;High-Volume Days&lt;/strong&gt;: Days exceeding normal patterns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-visual-analysis"&gt;📊 Visual Analysis
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Daily Trends&lt;/strong&gt;: Line charts with Monday markers for week-over-week comparison&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Weekly Heatmaps&lt;/strong&gt;: Identify peak call times throughout the week&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Traffic Rankings&lt;/strong&gt;: Sorted list of highest-volume days&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-per-sbc-analysis"&gt;🔍 Per-SBC Analysis
+&lt;/h3&gt;&lt;p&gt;For multi-SBC environments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Individual SBC load patterns&lt;/li&gt;
+&lt;li&gt;Capacity utilization comparison&lt;/li&gt;
+&lt;li&gt;Load balancing effectiveness assessment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="additional-information"&gt;Additional information
+&lt;/h2&gt;&lt;p&gt;In the README file of the repository, you will find more information regarding the script, including the prerequisites, how to create the Azure App Registration, and how to set up the required permissions.&lt;/p&gt;</description></item></channel></rss>

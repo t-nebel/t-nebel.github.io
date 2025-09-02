@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Offtopic on Through the Fog</title><link>https://blog.nebel.ruhr/categories/offtopic/</link><description>Recent content in Offtopic on Through the Fog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 22 May 2025 21:00:00 +0000</lastBuildDate><atom:link href="https://blog.nebel.ruhr/categories/offtopic/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World</title><link>https://blog.nebel.ruhr/p/hello-world/</link><pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate><guid>https://blog.nebel.ruhr/p/hello-world/</guid><description>&lt;img src="https://blog.nebel.ruhr/p/hello-world/header.jpeg" alt="Featured image of post Hello World" /&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;Write-Host&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id="welcome-to-the-blog---through-the-fog"&gt;Welcome to the Blog - Through the Fog
+&lt;/h1&gt;&lt;p&gt;So here we go - in the future I plan to publish blog posts about (primarily) smaller PowerShell scripts/projects, Microsoft Teams Voice, AudioCodes SBCs and everything else that keeps me going.&lt;/p&gt;</description></item></channel></rss>
