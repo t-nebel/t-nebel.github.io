@@ -71,3 +71,7 @@ You can find the script in the GitHub repository: [AudioCodes SBC INI File Compa
 - **🧠 Intelligent Comparison Logic:** Secondary name-based matching prevents false positives when identical content exists at different indices
 
 The script now handles complex scenarios where entries exist in both files but at different positions - exactly what AudioCodes SBC admins have been asking for!
+
+## Fix splitted content in for example IP Inbound Manipulations (April 17, 2026)
+
+The IPInboundManipulation section now correctly identifies the single actual difference: "+4911[0,2]#" vs "+4911[0,2,5]#" in DestUsernamePrefix — instead of seven spurious mismatches caused by the comma-splitting the quoted value.
