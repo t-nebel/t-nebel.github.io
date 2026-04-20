@@ -17,7 +17,7 @@ Alarichstraße 16a<br>
 </p><p> <strong>Vertreten durch: </strong><br>
 Tobias Nebel<br>
 </p><p><strong>Kontakt:</strong> <br>
-Telefon: O234 - <br>
+Telefon: O234 - 87936379 <br>
 E-Mail: blog -{at}- nebel.ruhr</a></br></p><p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br>
 Tobias Nebel <br> 
 Alarichstraße 16a<br> 
